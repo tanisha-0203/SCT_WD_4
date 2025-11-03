@@ -1,8 +1,6 @@
 # 🎮 Quiz Show – Interactive Quiz Web App  
 _A responsive and fun quiz application built with HTML, CSS, and JavaScript._
 
-![Quiz App Preview](https://github.com/tanisha-0203/SCT_WD_4/assets/preview.png)
-
 ---
 
 ## ✨ Features
@@ -30,25 +28,25 @@ _A responsive and fun quiz application built with HTML, CSS, and JavaScript._
 
 ## 💡 Future Enhancements
 
--🏆 **Add a leaderboard for top scores
--🔊 **Include sound effects or background music
--⚙️ **Add difficulty levels (Easy / Medium / Hard)
--🎨 **Enable light and dark / pastel modes
--💾 **Save player progress with Local Storage
+ -🏆 **Add a leaderboard for top scores
+ -🔊 **Include sound effects or background music
+ -⚙️ **Add difficulty levels (Easy / Medium / Hard)
+ -🎨 **Enable light and dark / pastel modes
+ -💾 **Save player progress with Local Storage
 -🌈 **Animated gradient backgrounds that shift dynamically
 
 ## 🧰 Tech Stack
 
--**HTML5 – Semantic structure**
--**CSS3 – Modern UI with gradients, shadows & animations**
--**JavaScript (ES6) – Quiz logic & dynamic question handling**
+- **HTML5 – Semantic structure**
+- **CSS3 – Modern UI with gradients, shadows & animations**
+- **JavaScript (ES6) – Quiz logic & dynamic question handling**
 
 ## 🤝 Contributing
 
--**If you'd like to contribute:
--**Fork the repo
--**Create your feature branch: git checkout -b feature/AmazingFeature
--**Commit your changes: git commit -m "Add some AmazingFeature"\
--**Push to the branch: git push origin feature/AmazingFeature
--**Open a Pull Request 🚀
+- **If you'd like to contribute:
+- **Fork the repo
+- **Create your feature branch: git checkout -b feature/AmazingFeature
+- **Commit your changes: git commit -m "Add some AmazingFeature"\
+- **Push to the branch: git push origin feature/AmazingFeature
+- **Open a Pull Request 🚀
 
