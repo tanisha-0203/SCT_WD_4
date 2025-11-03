@@ -1,0 +1,273 @@
+/* ===========================================================
+   🌗 To-Do App – Dark & Light Theme with Neon Accent
+   Author: Tanisha Manchanda
+   =========================================================== */
+
+/* ---------- Default (Dark Theme) ---------- */
+:root {
+  --bg: #0d1117;
+  --panel: rgba(22, 27, 34, 0.9);
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #6f5cf1;
+  --accent2: #00c2cb;
+  --success: #3fb950;
+  --danger: #f85149;
+  --border: #30363d;
+}
+
+/* ---------- Light Theme Overrides ---------- */
+body.light {
+  --bg: #f7f9fb;
+  --panel: #ffffffcc;
+  --text: #1b1f23;
+  --muted: #5a5f66;
+  --accent: #7c3aed;
+  --accent2: #0ea5e9;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --border: #d0d7de;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e9edf3 50%, #f7f9fb 100%);
+  color: var(--text);
+}
+
+/* ---------- Global Styles ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(135deg, #0d1117 0%, #111827 40%, #1b1f29 100%);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background 0.6s ease, color 0.4s ease;
+}
+
+/* ---------- Containers ---------- */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+/* ---------- Header ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(270deg, var(--accent), var(--accent2), #8a5cf1);
+  background-size: 400% 400%;
+  animation: gradientMove 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- Theme Toggle ---------- */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--accent2);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+/* ---------- Form & Inputs ---------- */
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input,
+select,
+button,
+textarea {
+  background: #0b0f16;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.2s ease, background 0.3s, transform 0.2s;
+}
+
+body.light input,
+body.light select,
+body.light textarea {
+  background: #fdfdfd;
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent2);
+  background: #111826;
+}
+
+body.light input:focus,
+body.light textarea:focus {
+  background: #ffffff;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+button.primary {
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  border: none;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(111, 92, 241, 0.3);
+}
+
+button.primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+button.ghost:hover {
+  border-color: var(--accent2);
+  color: var(--accent2);
+}
+
+button.success {
+  background: var(--success);
+  border: none;
+  color: #041d16;
+}
+
+button.success:hover {
+  filter: brightness(1.1);
+}
+
+button.danger {
+  background: var(--danger);
+  border: none;
+  color: #1b0e0e;
+}
+
+button.danger:hover {
+  filter: brightness(1.1);
+}
+
+/* ---------- Task Items ---------- */
+.list {
+  margin-top: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  background: #0b0f16;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  transition: transform 0.2s ease, border 0.2s;
+}
+
+body.light .item {
+  background: #ffffffcc;
+}
+
+.item:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent2);
+  box-shadow: 0 0 10px rgba(0, 194, 203, 0.2);
+}
+
+.meta {
+  flex: 1;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.title.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* ---------- Badges ---------- */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.badge {
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.badge:nth-child(odd) {
+  color: var(--accent2);
+  border-color: var(--accent2);
+}
+
+.badge:nth-child(even) {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- Small Text ---------- */
+small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ---------- Hover Animations ---------- */
+button:hover {
+  transform: scale(1.05);
+}
